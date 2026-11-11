@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -104,6 +105,14 @@ body {
   object-fit: contain;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
+
+.site-nav {
+  display: flex;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -125,6 +134,84 @@ body {
 
 .nav-list a:hover {
   color: var(--color-background);
+}
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Hamburger icon */
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-primary);
+  position: relative;
+  border-radius: 3px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 600px) {
+
+  .header-content {
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-ice-blue);
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .site-nav.active {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 }
 
 /* =========================
@@ -250,15 +337,18 @@ body {
 
 /* Tablets */
 
-@media (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 768px) {
 
   .header-content {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .nav-list {
     justify-content: center;
   }
+}
+
+@media (max-width: 768px) {
 
   .about-highlights {
     grid-template-columns: 1fr;
@@ -321,4 +411,15 @@ body {
   .about-card {
     padding: 20px;
   }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 15px;
+  text-align: center;
+  color: var(--color-secondary);
+  font-size: 0.85rem;
 }

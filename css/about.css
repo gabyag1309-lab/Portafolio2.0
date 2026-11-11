@@ -1,0 +1,150 @@
+:root {
+  /* Primary colors */
+  --color-primary: #243b5a;
+  --color-secondary: #52769b;
+
+  /* Accent colors */
+  --color-light-blue: #a7bed3;
+  --color-ice-blue: #e7eef5;
+  --color-huesito: #f0f8ff;
+  --color-purple: #6a0dad;
+
+  /* Neutral color */
+  --color-background: #faf9f6;
+
+  /* Font color */
+  --font-color: #333333;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-xl: 70px;
+}
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.page-intro {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-xs) 40px;
+}
+
+.page-intro h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin: 10px 0 15px;
+}
+
+.page-intro h1 span {
+  color: var(--color-secondary);
+}
+
+.page-intro p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-section {
+  padding: 50px var(--spacing-md);
+}
+
+.profile-section-alt {
+  background-color: var(--color-ice-blue);
+  border-radius: 20px;
+}
+
+.profile-section h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.profile-section h2 span {
+  color: var(--color-secondary);
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  padding-left: 30px;
+  border-left: 3px solid var(--color-light-blue);
+}
+
+.timeline-item {
+  position: relative;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-light-blue);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* dot on the line */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-secondary);
+  border: 3px solid var(--color-background);
+  border-radius: 50%;
+}
+
+.timeline-item:hover::before {
+  background-color: var(--color-purple);
+  border-color: var(--color-background);
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(36, 59, 90, 0.12);
+  border-color: var(--color-purple);
+}
+
+.timeline-date {
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.timeline-item h3 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin: 6px 0 2px;
+}
+
+.timeline-place {
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .page-intro h1 {
+    font-size: 1.9rem;
+  }
+
+  .profile-section {
+    padding: 40px 16px;
+  }
+}

@@ -7,21 +7,43 @@
 
     <title>Contact | GAG</title>
 
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/contactstyle.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/contactstyle.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <script src="../js/script.js" defer></script>
   </head>
 
   <body class="contact-page">
     <!-- HEADER -->
-    <header class="contact-header">
-      <a href="index.html" class="contact-logo">
-        <img
-          src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793822584/Elegant_Slate_Blue_GAG_Logo_bg_removed.png.png"
-          alt="GAG Logo"
-        />
-      </a>
-
-      <a href="index.html" class="back-link">Back to portfolio</a>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="../index.html" class="logo">
+            <img
+              src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793822584/Elegant_Slate_Blue_GAG_Logo_bg_removed.png.png"
+              alt="GAG Logo"
+            />
+          </a>
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+          <nav class="site-nav" id="site-nav">
+             <ul class="nav-list">
+               <li><a href="./about.html#about">About</a></li>
+               <li><a href="../index.html#skills">Skills</a></li>
+               <li><a href="../index.html#cheatsheets">Cheatsheets</a></li>
+              <li><a href="../index.html#resources">Resources</a></li>
+              <li><a href="./html/contacto.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <!-- MAIN -->

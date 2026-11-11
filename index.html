@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <script src="./js/script.js" defer></script>
   </head>
 
   <body>
@@ -16,20 +18,28 @@
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <a href="index.html" class="logo">
+          <a href="./index.html" class="logo">
             <img
               src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793822584/Elegant_Slate_Blue_GAG_Logo_bg_removed.png.png"
               alt="GAG Logo"
             />
           </a>
-
-          <nav>
-            <ul class="nav-list">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#cheatsheets">Cheatsheets</a></li>
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+          <nav class="site-nav" id="site-nav">
+             <ul class="nav-list">
+               <li><a href="./html/about.html#about">About</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#cheatsheets">Cheatsheets</a></li>
               <li><a href="#resources">Resources</a></li>
-              <li><a href="contacto.html">Contact</a></li>
+              <li><a href="./html/contacto.html">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -103,7 +113,9 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer></footer>
+      <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 Gabriela Alvarez | GAG Portfolio</p>
+    </footer>
   </body>
 </html>
