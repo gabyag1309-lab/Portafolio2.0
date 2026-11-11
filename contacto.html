@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact | GAG</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/contactstyle.css" />
+  </head>
+
+  <body class="contact-page">
+    <!-- HEADER -->
+    <header class="contact-header">
+      <a href="index.html" class="contact-logo">
+        <img
+          src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793822584/Elegant_Slate_Blue_GAG_Logo_bg_removed.png.png"
+          alt="GAG Logo"
+        />
+      </a>
+
+      <a href="index.html" class="back-link">Back to portfolio</a>
+    </header>
+
+    <!-- MAIN -->
+    <main class="contact-main">
+      <section class="contact-card">
+        <div class="contact-heading">
+          <span class="section-label">LET'S CONNECT</span>
+
+          <h1>Get in touch<span>.</span></h1>
+
+          <p>
+            Have a question, an idea or just want to say hello? I'd love to hear
+            from you!
+          </p>
+        </div>
+
+        <form class="contact-form">
+          <fieldset>
+            <legend>Personal information</legend>
+
+            <div class="form-group">
+              <label for="nombre">Full name</label>
+
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Gabriela Alvarez"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="asunto">Subject</label>
+
+              <input
+                type="text"
+                name="asunto"
+                id="asunto"
+                placeholder="What would you like to talk about?"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Your message</label>
+
+              <textarea
+                name="mensaje"
+                id="mensaje"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-buttons">
+            <button type="submit">Send message</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="contact-footer">
+      <p>© 2026 Gabriela Alvarez | GAG Portfolio</p>
+    </footer>
+  </body>
+</html>
