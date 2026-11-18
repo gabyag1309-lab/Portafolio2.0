@@ -1,0 +1,145 @@
+
+/* ========================================
+   SKILLS CSS
+   Styles exclusive to skills.html
+======================================== */
+
+
+/* =========================
+   SKILLS PAGE
+========================= */
+
+.skills-page {
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+
+/* =========================
+   SKILLS INTRO
+========================= */
+
+.skills-intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skills-intro h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin: 10px 0 15px;
+}
+
+.skills-intro h1 span {
+  color: var(--color-secondary);
+}
+
+.skills-intro p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   SKILLS GRID
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* =========================
+   SKILL CARDS
+========================= */
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--color-ice-blue);
+
+  border: 1px solid var(--color-light-blue);
+  border-radius: 15px;
+
+  padding: 30px 20px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Skill icon */
+
+.skill-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+
+/* Skill title */
+
+.skill-card h3 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+/* Skill description */
+
+.skill-card p {
+  color: var(--font-color);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+/* Hover effect */
+
+.skill-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 5px 15px rgba(36, 59, 90, 0.12);
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-intro h1 {
+    font-size: 2rem;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .skills-page {
+    padding: 35px 12px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 25px 20px;
+  }
+
+}

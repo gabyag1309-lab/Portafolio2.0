@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,115 +8,75 @@
 
     <title>Gabriela Alvarez | Portfolio</title>
 
+    <!-- CSS files -->
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="../css/profile.css" />
-    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
 
-  <body>
-    <!-- HEADER -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <a href="./index.html" class="logo">
-            <img
-              src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793822584/Elegant_Slate_Blue_GAG_Logo_bg_removed.png.png"
-              alt="GAG Logo"
-            />
-          </a>
-          <button
-            type="button"
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-          >
-            <span class="hamburger"></span>
-          </button>
-          <nav class="site-nav" id="site-nav">
-             <ul class="nav-list">
-               <li><a href="./html/about.html#about">About</a></li>
-               <li><a href="#skills">Skills</a></li>
-               <li><a href="#cheatsheets">Cheatsheets</a></li>
-              <li><a href="#resources">Resources</a></li>
-              <li><a href="./html/contacto.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+  <body data-root="./">
 
-    <!-- MAIN -->
+    <!-- Dynamic header -->
+    <div id="site-header"></div>
+
+    <!-- Main content -->
     <main class="main">
-      <!-- HERO SECTION -->
+
+      <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <h1>Gabriela Alvarez</h1>
+        <div class="hero-content">
 
-          <h2>Web Development Student</h2>
-
-          <p>Learning, creating and building my journey in web development.</p>
-
-          <img
-            src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793212231/170273D9-9CF4-4E70-8A37-77A4DEFBDFB7.png"
-            width="250"
-            height="350"
-            alt="Illustration of a woman with curly brown hair and glasses"
-          />
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="about" class="about-section">
-        <div class="container">
-          <div class="about-intro">
-            <span class="section-label">GET TO KNOW ME</span>
-
-            <h2>About Me<span>.</span></h2>
-
+          <div class="hero-text">
+            <h1>Gabriela Alvarez</h1>
+            <h2>Web Development Student</h2>
             <p>
-              I'm a curious, creative and adaptable person who enjoys learning,
-              exploring new cultures and taking on new challenges. Currently,
-              I'm studying Web Development and building my skills in
-              programming, design and technology. I enjoy combining creativity
-              with problem-solving and finding new ways to turn ideas into
-              reality.
+            I'm Gabriela, a web development student passionate about
+            technology, creativity, and continuous learning. I enjoy
+            discovering how things work and turning ideas into practical
+            solutions.
             </p>
           </div>
 
-          <div class="about-highlights">
-            <div class="about-card">
-              <h3>01. Curious Mind</h3>
-              <p>
-                I love learning new things, exploring ideas and understanding
-                how things work.
-              </p>
-            </div>
-
-            <div class="about-card">
-              <h3>02. Creative Spirit</h3>
-              <p>
-                I enjoy creativity, design, travelling and discovering different
-                perspectives.
-              </p>
-            </div>
-
-            <div class="about-card">
-              <h3>03. Always Growing</h3>
-              <p>
-                I'm continuously developing my skills, learning languages and
-                challenging myself.
-              </p>
-            </div>
+          <div class="hero-image">
+            <img
+              src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793212231/170273D9-9CF4-4E70-8A37-77A4DEFBDFB7.png"
+              alt="Portrait of Gabriela Alvarez"
+            />
           </div>
+
         </div>
       </section>
+
+      <!-- About introduction -->
+     
+
+      <!-- Cheatsheets section -->
+      <section id="cheatsheets" class="cheatsheets-section">
+        <span class="section-label">My learning resources</span>
+        <h2>Cheatsheets</h2>
+        <p>
+          A collection of useful notes and references from my web
+          development journey.
+        </p>
+      </section>
+
+      <!-- Resources section -->
+      <section id="resources" class="resources-section">
+        <span class="section-label">Useful links</span>
+        <h2>Resources</h2>
+        <p>
+          Tools, websites, and learning resources that help me
+          develop my skills.
+        </p>
+      </section>
+
     </main>
 
-      <!-- Footer -->
-    <footer class="footer">
-      <p>© 2026 Gabriela Alvarez | GAG Portfolio</p>
-    </footer>
+    <!-- Dynamic footer -->
+    <div id="site-footer"></div>
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+
   </body>
 </html>
