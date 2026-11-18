@@ -1,128 +1,105 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Contact | GAG</title>
+    <title>Contact | Gabriela Alvarez</title>
 
+    <!-- CSS files -->
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/contactstyle.css" />
-    <link rel="stylesheet" href="../css/profile.css" />
-    <script src="../js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
   </head>
 
-  <body class="contact-page">
-    <!-- HEADER -->
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <a href="../index.html" class="logo">
-            <img
-              src="https://res.cloudinary.com/plxc7nnd/image/upload/v1793822584/Elegant_Slate_Blue_GAG_Logo_bg_removed.png.png"
-              alt="GAG Logo"
-            />
-          </a>
-          <button
-            type="button"
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-          >
-            <span class="hamburger"></span>
-          </button>
-          <nav class="site-nav" id="site-nav">
-             <ul class="nav-list">
-               <li><a href="./about.html#about">About</a></li>
-               <li><a href="../index.html#skills">Skills</a></li>
-               <li><a href="../index.html#cheatsheets">Cheatsheets</a></li>
-              <li><a href="../index.html#resources">Resources</a></li>
-              <li><a href="./html/contacto.html">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+  <body class="contact-page" data-root="../">
 
-    <!-- MAIN -->
+    <!-- Dynamic header -->
+    <div id="site-header"></div>
+
+    <!-- Main content -->
     <main class="contact-main">
-      <section class="contact-card">
-        <div class="contact-heading">
-          <span class="section-label">LET'S CONNECT</span>
 
-          <h1>Get in touch<span>.</span></h1>
+      <section class="contact-section">
+
+        <div class="contact-intro">
+          <span class="section-label">Let's connect</span>
+
+          <h1>Get in touch.</h1>
 
           <p>
-            Have a question, an idea or just want to say hello? I'd love to hear
-            from you!
+            Have a question, an idea, or a project in mind?
+            I'd love to hear from you!
           </p>
         </div>
 
-        <form class="contact-form">
-          <fieldset>
-            <legend>Personal information</legend>
+        <div class="contact-card">
+
+          <form class="contact-form" action="#" method="POST">
 
             <div class="form-group">
-              <label for="nombre">Full name</label>
-
+              <label for="name">Name</label>
               <input
                 type="text"
-                name="nombre"
-                id="nombre"
-                placeholder="Gabriela Alvarez"
+                id="name"
+                name="name"
+                placeholder="Your name"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="email">Email address</label>
-
+              <label for="email">Email</label>
               <input
                 type="email"
-                name="email"
                 id="email"
-                placeholder="example@email.com"
+                name="email"
+                placeholder="Your email address"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="asunto">Subject</label>
-
+              <label for="subject">Subject</label>
               <input
                 type="text"
-                name="asunto"
-                id="asunto"
-                placeholder="What would you like to talk about?"
+                id="subject"
+                name="subject"
+                placeholder="What is this about?"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="mensaje">Your message</label>
-
+              <label for="message">Message</label>
               <textarea
-                name="mensaje"
-                id="mensaje"
-                rows="5"
+                id="message"
+                name="message"
+                rows="6"
                 placeholder="Write your message here..."
                 required
               ></textarea>
             </div>
-          </fieldset>
 
-          <div class="form-buttons">
-            <button type="submit">Send message</button>
-            <button type="reset">Reset</button>
-          </div>
-        </form>
+            <button type="submit" class="submit-button">
+              Send message
+            </button>
+
+          </form>
+
+        </div>
+
       </section>
+
     </main>
 
-    <footer class="contact-footer">
-      <p>© 2026 Gabriela Alvarez | GAG Portfolio</p>
-    </footer>
+    <!-- Dynamic footer -->
+    <div id="site-footer"></div>
+
+    <!-- JavaScript -->
+    <script type="module" src="../js/main.js"></script>
+
   </body>
 </html>
