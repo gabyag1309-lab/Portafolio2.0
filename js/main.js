@@ -18,6 +18,7 @@ import { renderSkills } from "./skills.js";
 
 import { initializeCheatsheets } from "./cheatsheets.js";
 
+import { initializeCheatsheets, initializeCheatsheetDetails } from "./cheatsheets.js";
 
 // =========================
 // INSERT HEADER AND FOOTER
@@ -72,3 +73,11 @@ renderSkills();
 // Cheatsheets section
 
 initializeCheatsheets();
+
+// Cheatsheets cards and tabs
+
+initializeCheatsheets();
+
+// Cheatsheets detail page
+
+initializeCheatsheetDetails();
