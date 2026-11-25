@@ -1,3 +1,4 @@
+
 // ========================================
 // MAIN.JS
 // Main JavaScript file
@@ -16,9 +17,11 @@ import { initializeBurgerMenu } from "./burger.js";
 
 import { renderSkills } from "./skills.js";
 
-import { initializeCheatsheets } from "./cheatsheets.js";
+import {
+  initializeCheatsheets,
+  initializeCheatsheetDetails
+} from "./cheatsheets.js";
 
-import { initializeCheatsheets, initializeCheatsheetDetails } from "./cheatsheets.js";
 
 // =========================
 // INSERT HEADER AND FOOTER
@@ -34,9 +37,7 @@ const root = document.body.dataset.root || "./";
 const headerContainer = document.getElementById("site-header");
 
 if (headerContainer) {
-
   headerContainer.innerHTML = createHeader(root);
-
 }
 
 
@@ -45,9 +46,7 @@ if (headerContainer) {
 const footerContainer = document.getElementById("site-footer");
 
 if (footerContainer) {
-
   footerContainer.innerHTML = createFooter();
-
 }
 
 
@@ -70,13 +69,10 @@ initializeBurgerMenu();
 renderSkills();
 
 
-// Cheatsheets section
-
-initializeCheatsheets();
-
 // Cheatsheets cards and tabs
 
 initializeCheatsheets();
+
 
 // Cheatsheets detail page
 
