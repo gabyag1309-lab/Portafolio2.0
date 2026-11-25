@@ -1,4 +1,3 @@
-
 // ========================================
 // MAIN.JS
 // Main JavaScript file
@@ -16,6 +15,8 @@ import { initializeDarkMode } from "./dark-mode.js";
 import { initializeBurgerMenu } from "./burger.js";
 
 import { renderSkills } from "./skills.js";
+
+import { initializeCheatsheets } from "./cheatsheets.js";
 
 
 // =========================
@@ -66,3 +67,8 @@ initializeBurgerMenu();
 // Skills page
 
 renderSkills();
+
+
+// Cheatsheets section
+
+initializeCheatsheets();

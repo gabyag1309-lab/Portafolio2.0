@@ -1,0 +1,310 @@
+
+/* ========================================
+   CHEATSHEETS DETAIL PAGE
+======================================== */
+
+.cheatsheet-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 24px 80px;
+}
+
+
+/* ========================================
+   PAGE INTRODUCTION
+======================================== */
+
+.cheatsheet-page-intro {
+  text-align: center;
+  padding: 30px 0 55px;
+}
+
+.cheatsheet-page-intro h1 {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin: 15px 0;
+}
+
+.cheatsheet-page-intro p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: var(--font-color);
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--color-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+
+/* ========================================
+   INDIVIDUAL CHEATSHEET SECTIONS
+======================================== */
+
+.cheatsheet-details {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.cheatsheet-detail-section {
+  scroll-margin-top: 100px;
+
+  background-color: var(--color-background);
+
+  border: 1px solid var(--color-light-blue);
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow: 0 5px 18px rgba(36, 59, 90, 0.06);
+}
+
+
+/* ========================================
+   DETAIL HEADER
+======================================== */
+
+.detail-header {
+  border-bottom: 1px solid var(--color-light-blue);
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.detail-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.detail-category {
+  display: block;
+  color: var(--color-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.detail-header h2 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.detail-intro {
+  color: var(--font-color);
+  line-height: 1.7;
+  max-width: 750px;
+}
+
+
+/* ========================================
+   CONTENT SECTIONS
+======================================== */
+
+.detail-content {
+  margin-bottom: 30px;
+}
+
+.detail-content h3,
+.detail-tips h3 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.detail-content p {
+  color: var(--font-color);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+
+/* ========================================
+   INFORMATION LISTS
+======================================== */
+
+.detail-list {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-list li {
+  background-color: var(--color-ice-blue);
+
+  border-radius: 10px;
+  padding: 15px 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
+.detail-list strong {
+  color: var(--color-primary);
+}
+
+
+/* ========================================
+   CODE BLOCKS
+======================================== */
+
+.detail-content pre {
+  background-color: #1e2d40;
+  color: #e7eef5;
+
+  padding: 22px;
+
+  border-radius: 12px;
+
+  overflow-x: auto;
+
+  font-family: monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  margin-top: 15px;
+}
+
+.detail-content code {
+  white-space: pre;
+}
+
+
+/* ========================================
+   PRACTICAL TIPS
+======================================== */
+
+.detail-tips {
+  background-color: var(--color-ice-blue);
+
+  border-left: 4px solid var(--color-secondary);
+
+  border-radius: 10px;
+
+  padding: 22px;
+  margin: 30px 0;
+}
+
+.detail-tips ul {
+  padding-left: 20px;
+}
+
+.detail-tips li {
+  color: var(--font-color);
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+
+/* ========================================
+   EXTERNAL RESOURCE LINK
+======================================== */
+
+.detail-external-link {
+  display: inline-block;
+
+  background-color: var(--color-primary);
+  color: white;
+
+  padding: 12px 22px;
+
+  border-radius: 9px;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.detail-external-link:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-3px);
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+[data-theme="dark"] .cheatsheet-page-intro h1,
+[data-theme="dark"] .detail-header h2,
+[data-theme="dark"] .detail-content h3,
+[data-theme="dark"] .detail-tips h3 {
+  color: #d7e5f4;
+}
+
+[data-theme="dark"] .cheatsheet-page-intro p,
+[data-theme="dark"] .detail-intro,
+[data-theme="dark"] .detail-content p {
+  color: #d1dce8;
+}
+
+[data-theme="dark"] .cheatsheet-detail-section {
+  background-color: #1e2d40;
+  border-color: #52769b;
+}
+
+[data-theme="dark"] .detail-header {
+  border-color: #52769b;
+}
+
+[data-theme="dark"] .detail-list li,
+[data-theme="dark"] .detail-tips {
+  background-color: #26384e;
+}
+
+[data-theme="dark"] .detail-list strong {
+  color: #d7e5f4;
+}
+
+[data-theme="dark"] .detail-list li,
+[data-theme="dark"] .detail-tips li {
+  color: #d1dce8;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media screen and (max-width: 600px) {
+
+  .cheatsheet-main {
+    padding: 30px 16px 50px;
+  }
+
+  .cheatsheet-detail-section {
+    padding: 22px;
+  }
+
+  .detail-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .detail-content pre {
+    font-size: 0.8rem;
+    padding: 15px;
+  }
+
+  .detail-list li {
+    padding: 13px;
+  }
+
+}

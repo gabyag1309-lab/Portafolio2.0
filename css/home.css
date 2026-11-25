@@ -282,3 +282,306 @@
     font-size: 1rem;
   }
 }
+
+/* ========================================
+   CHEATSHEETS SECTION
+======================================== */
+
+.cheatsheets-section {
+  padding: 70px var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Introduction */
+
+.cheatsheets-intro {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.cheatsheets-intro h2 {
+  color: var(--color-primary);
+  font-size: 2.2rem;
+  margin: 12px 0;
+}
+
+.cheatsheets-intro p {
+  color: var(--font-color);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   CATEGORY TABS
+======================================== */
+
+.cheatsheets-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-bottom: 40px;
+}
+
+.cheatsheet-tab {
+  background-color: transparent;
+  color: var(--color-primary);
+
+  border: 1px solid var(--color-light-blue);
+  border-radius: 25px;
+
+  padding: 10px 18px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Active tab */
+
+.cheatsheet-tab[aria-selected="true"] {
+  background-color: var(--color-secondary);
+  color: white;
+
+  border-color: var(--color-secondary);
+}
+
+/* Inactive tab hover */
+
+.cheatsheet-tab:hover:not([aria-selected="true"]) {
+  background-color: var(--color-ice-blue);
+  border-color: var(--color-secondary);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   CHEATSHEETS GRID
+======================================== */
+
+.cheatsheets-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* ========================================
+   CHEATSHEET CARDS
+======================================== */
+
+.cheatsheet-card {
+  background-color: var(--color-background);
+
+  border: 1px solid var(--color-light-blue);
+  border-radius: 16px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 230px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cheatsheet-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--color-secondary);
+
+  box-shadow: 0 8px 20px rgba(36, 59, 90, 0.12);
+}
+
+
+/* Main clickable area */
+
+.cheatsheet-card-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Technology icons */
+
+.cheatsheet-icon {
+  width: 38px;
+  height: 38px;
+
+  object-fit: contain;
+
+  margin-bottom: 18px;
+}
+
+.cheatsheet-card h3 {
+  color: var(--color-primary);
+
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cheatsheet-card p {
+  color: var(--font-color);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  margin-bottom: 18px;
+}
+
+
+/* Card footer */
+
+.cheatsheet-card-footer {
+  color: var(--color-secondary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  margin-top: auto;
+
+  transition: transform 0.3s ease;
+}
+
+.cheatsheet-card:hover .cheatsheet-card-footer {
+  transform: translateX(4px);
+}
+
+
+/* External resource link */
+
+.cheatsheet-external-link {
+  display: inline-block;
+  align-self: flex-start;
+
+  color: var(--color-secondary);
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  margin-top: 15px;
+
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cheatsheet-external-link:hover {
+  color: var(--color-primary);
+}
+
+
+/* Keyboard accessibility */
+
+.cheatsheet-card-link:focus-visible,
+.cheatsheet-external-link:focus-visible,
+.cheatsheet-tab:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+[data-theme="dark"] .cheatsheets-intro h2 {
+  color: #d7e5f4;
+}
+
+[data-theme="dark"] .cheatsheets-intro p {
+  color: #d1dce8;
+}
+
+[data-theme="dark"] .cheatsheet-tab {
+  color: #d7e5f4;
+  border-color: #52769b;
+}
+
+[data-theme="dark"] .cheatsheet-tab[aria-selected="true"] {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+[data-theme="dark"] .cheatsheet-tab:hover:not([aria-selected="true"]) {
+  background-color: #26384e;
+}
+
+[data-theme="dark"] .cheatsheet-card {
+  background-color: #1e2d40;
+  border-color: #52769b;
+}
+
+[data-theme="dark"] .cheatsheet-card h3 {
+  color: #d7e5f4;
+}
+
+[data-theme="dark"] .cheatsheet-card p {
+  color: #d1dce8;
+}
+
+[data-theme="dark"] .cheatsheet-card-footer,
+[data-theme="dark"] .cheatsheet-external-link {
+  color: #a7bed3;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Tablets */
+
+@media screen and (max-width: 900px) {
+
+  .cheatsheets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+
+  .cheatsheets-section {
+    padding: 50px 16px;
+  }
+
+  .cheatsheets-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .cheatsheets-tabs {
+    gap: 8px;
+  }
+
+  .cheatsheet-tab {
+    font-size: 0.8rem;
+    padding: 9px 13px;
+  }
+
+  .cheatsheets-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

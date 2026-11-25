@@ -242,3 +242,68 @@
     width: 100%;
   }
 }
+
+/* ========================================
+   7. SEND MESSAGE BUTTON
+======================================== */
+
+.submit-button {
+  display: inline-block;
+
+  background-color: var(--color-primary);
+  color: white;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding: 14px 32px;
+
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+
+.submit-button:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 15px rgba(36, 59, 90, 0.15);
+}
+
+/* Click effect */
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Keyboard accessibility */
+
+.submit-button:focus-visible {
+  outline: 3px solid var(--color-light-blue);
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   8. DARK MODE
+======================================== */
+
+[data-theme="dark"] .submit-button {
+  background-color: var(--color-light-blue);
+  color: white;
+  border-color: var(--color-light-blue);
+}
+
+[data-theme="dark"] .submit-button:hover {
+  background-color: #d7e5f4;
+  border-color: #d7e5f4;
+}
